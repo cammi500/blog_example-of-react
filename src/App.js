@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
 
+
+import Navbar from './Navbar';
+import Home from './Home';
 function App() {
+  const title ='welcome to my application'
+  const like  =30
+  const link ='http://www.google.com'
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar/>
+      <div className="content">
+        <h1>App component</h1>
+        <Home/>
+        <h3>{title}</h3>
+        <p>likes{like}</p>
+        <p>{'hello thiri'}</p>
+        <p>{[1,23,4]}</p>
+        <a href={link}>google </a>
+      </div>
+
     </div>
   );
 }
