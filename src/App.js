@@ -2,6 +2,8 @@
 
 import Navbar from './Navbar';
 import Home from './Home';
+import Blog from './Blog';
+
 function App() {
   const title ='welcome to my application'
   const like  =30
@@ -12,6 +14,8 @@ function App() {
       <div className="content">
         <h1>App component</h1>
         <Home/>
+        <Blog/>
+       
         {/* <h3>{title}</h3>
         <p>likes{like}</p>
         <p>{'hello thiri'}</p>
