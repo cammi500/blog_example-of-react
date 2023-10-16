@@ -1,7 +1,7 @@
 
 const Gold = ({golds,title,handle}) => {
     return ( 
-        <div className="gold">
+        <div className="gold text-green-600 underlined">
             <h2>{title}</h2>
             {golds.map((gold) => (
                 

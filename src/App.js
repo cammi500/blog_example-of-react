@@ -14,7 +14,9 @@ function App() {
       <div className="content">
         <h1>App component</h1>
         <Home/>
-        
+        <span className="text-3xl font-bold underline">
+      Hello world!
+    </span>
        
         {/* <h3>{title}</h3>
         <p>likes{like}</p>
@@ -26,5 +28,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;

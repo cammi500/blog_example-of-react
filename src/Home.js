@@ -27,7 +27,7 @@
 // }
  
 // export default Home;
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BlogList from "./BlogList";
 import Gold from "./Gold";
 const Home = () => {
@@ -48,15 +48,23 @@ const Home = () => {
       const newBlogs = blogs.filter(blog => blog.id !== id);
       setBlogs(newBlogs);
    }
+
+   const [name,setName] = useState('thiriaung')
    const handle = (id) => {
     const newGolds =golds.filter(gold =>gold.id !== id);
     setGolds(newGolds);
    }
+
+   useEffect(()=>{
+    console.log('use chaning');
+    console.log(name);
+   },[name]);
   return ( 
     <div className="home">
       <BlogList blogs={blogs} title="All of my blogs" handelDelete={handelDelete}/>
       <BlogList blogs={blogs.filter((blog) => blog.author === 'Su su')} title="Su Su Blog!" handelDelete={handelDelete}/>
       <Gold golds={golds} title="aung thamadi" handle={handle}/>
+      <button onClick={()=>setName('lulu')}>change name</button>
     </div>
    );
 }
